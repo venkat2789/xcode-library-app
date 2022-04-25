@@ -17,11 +17,13 @@ struct DetailView: View {
             Spacer()
         }
         .padding()
+        .navigationBarTitle("Book Details", displayMode: .inline)
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         DetailView(book: .init())
+        NavigationView { DetailView(book: .init()) }
     }
 }
